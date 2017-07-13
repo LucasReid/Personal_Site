@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <link href="lucas.css" type="text/css" rel="stylesheet"/>
+    <title>Lucas Reid</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="w3-black">
+    
+<nav class="w3-sidenav w3-center w3-large w3-hide-small">
+  <a class="w3-padding-large w3-black" href="#">
+    <p>HOME</p>
+  </a>
+  <a class="w3-padding-large w3-hover-black w3-hover-text-white w3-text-grey" href="#about">
+    <p>About</p>
+  </a>
+  <a class="w3-padding-large w3-hover-black w3-hover-text-white w3-text-grey" href="#schoolWork">
+    <p>Portfolio</p>
+  </a>
+  <a class="w3-padding-large w3-hover-black w3-hover-text-white w3-text-grey" href="#contact">
+    <p>Contact</p>
+  </a>
+</nav>
+        
+<div class="w3-padding-large" id="body">
+    <p class="w3-jumbo w3-text-white w3-center">Lucas Reid</p>
+    
+    <div id="container">
+                    <script src="lib/THREE_lib/three.min.js"></script>
+                    <script src="lib/three.js"></script>
+                    <script>
+                        var scene, camera, renderer;
+                        var cube, cubeGeo, cubeMat, light;
+                        var WIDTH = 700;
+                        var HEIGHT = 520;
+                        
+                        function init(){
+                            scene = new THREE.Scene();
+                            //scene.background = new THREE.Color( 0xF0F0F0 );//scene color
+                            camera = new THREE.PerspectiveCamera( 80, WIDTH/ HEIGHT,0.1, 1000);
+                            camera.position.z=100;
+                            //Lambert Material needs light!
+                            light = new THREE.DirectionalLight(0xFFFFFF, 1.08);
+                            light.position.set(0, 1, 1).normalize();
+                            scene.add(light);
+                            //canvas inside of divide 
+                            renderer = new THREE.WebGLRenderer({ antialias: true});
+                            var canvas = document.getElementById("container");
+                            renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+                            container.appendChild(renderer.domElement);
+                            //add cube
+                            var pictureCube = cube();
+                            scene.add(cube);    
+                        }
+                        function cube(){
+                            var faceMaterials=[
+                                new THREE.MeshLambertMaterial({
+                                    map: THREE.ImageUtils.loadTexture('PersonalPics/jakeNavy.JPG')
+                                    }),
+                               new THREE.MeshLambertMaterial({
+                                   map: THREE.ImageUtils.loadTexture('PersonalPics/fishing.JPG')
+                                }),
+                               new THREE.MeshLambertMaterial(),//top    These two are not seen by the viewer1000);
+     
+                               new THREE.MeshLambertMaterial(),//bottom 
+                               new THREE.MeshLambertMaterial({
+                                   map: THREE.ImageUtils.loadTexture('PersonalPics/lake.JPG')
+                               }),
+                                new THREE.MeshLambertMaterial({
+                                   map: THREE.ImageUtils.loadTexture('PersonalPics/canada.JPG')
+                               })
+                            ];  
+                            cubeGeo = new THREE.BoxGeometry(85, 65, 85);  
+                            cube= new THREE.Mesh(cubeGeo, new THREE.MeshFaceMaterial(faceMaterials));
+             
+                            return cube;
+                        }
+                        function animate(){
+                            requestAnimationFrame(animate);
+                            cube.rotation.y -= 0.002;
+                            renderer.render(scene, camera);
+                        }
+                        init(); 
+                        animate();
+                    </script>
+                    <noscript>Sorry, your browser does not support JavaScript.</noscript> 
+                </div><!-- end of picture script -->
+    <p></p>
+    <p></p>
+    <p></p>
+   
+     <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Lucas Reid</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>
+            I am a graduate from Lock Haven University with a bachelors degree in applied computer science, my area of expertise is object oriented programming however my desired field is Web Development. I find creating websites both fun and intuitive and hope to learn all that i can in this discipline. I have a decent background in HTML &amp; CSS, as well as JavaScript.  I understand and can work with PHP and THREE.js; during my collegiate career my focus was on OOP (Java) which will help refine my skills in these two languages. Given the limited computer science courses at Lock Haven University I was unable to focus and define my skills on web development specifically, however I feel that I have acquired a sufficient programming background. 
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skill Set</h3>
+      <hr style="width:200px" class="w3-opacity">
+    <p class="w3-wide">HTML &amp; CSS</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div>
+    <p class="w3-wide">Java</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:60%"></div>
+    </div>
+    <p class="w3-wide">Three js scripting</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:55%"></div>
+    </div>
+    <p class="w3-wide">PHP</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:50%"></div>
+    </div><br>
+</div>  
+<div class="schoolWork w3-content  w3-padding-64" id="schoolWork">
+    <h2 class="w3-text-light-grey">Portfolio</h2>
+    <hr style="width:200px" class="w3-opacity">
+    
+    <a href="COMP305-master/mainPageTemplate.php"><button class="w3-btn-block w3-grey w3-hover-yellow w3-text-yellow">Comp350 Database Application Dev. </button></a>
+    <p></p>
+    
+    <a href="COMP205/Class_Project/index.html"><button class="w3-btn-block w3-grey w3-hover-aqua w3-text-aqua">Comp250 Web Development Final </button></a>
+    <p></p>
+   
+    <a href="Graphics/Globe.html"><button class="w3-btn-block w3-grey w3-hover-blue w3-text-blue">THREE.js Graphics Final Project</button></a>
+    <p></p>
+    <a href="Penguin_Labs/Index.php"><button class="w3-btn-block w3-grey w3-hover-red w3-text-red">Independent Study Penguin Labs </button></a>
+</div> 
+    
+<div class="w3-content  w3-padding-64" id="contact">
+    <h2 class="w3-text-light-grey">Contact Info</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <br>
+    <ul class="w3-text-white">
+        <li class="w3-large">Email: lnr7413@gmail.com</li>
+        <li class="w3-large">School Email: lnr7605@lhup.edu</li>
+        <li>Phone: please email me...</li>
+    </ul>
+    
+</div>   
+<div class="w3-content  w3-padding-64 w3-text-dark-grey">
+<p class="w3-small">Scripting copyright Lucas Reid 2017 &#169;</p>        
+<p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+
+</div>
+</body>
+</html>

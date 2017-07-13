@@ -1,0 +1,24 @@
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.w3-sidenav {width: 150px;background: #222;}
+#body {margin-left: 150px}
+@media only screen and (max-width: 600px) {#body {margin-left: 0}}
+
+#container{
+    background-color: black;
+    width: 800px;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+
