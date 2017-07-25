@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
     <link href="lucas.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>Lucas Reid</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -120,25 +122,123 @@
     <h2 class="w3-text-light-grey">Portfolio</h2>
     <hr style="width:200px" class="w3-opacity">
     
-    <a href="COMP305-master/mainPageTemplate.php"><button class="w3-btn-block w3-grey w3-hover-yellow w3-text-yellow">Comp350 Database Application Dev. </button></a>
+    
+    <!--START PORTFOLIO LINKS -->
+    
+    <!--INFORMATION MODAL -->
+    <div id="info" class="modal">
+        <span onclick="document.getElementById('info').style.display='none'" class="close"
+              title="Close Modal">&times;</span>
+        <div class="modal-content animate"> 
+           <div class="container">
+                <h3>Database and Application Development</h3>
+                <p>My overall part in this project was to style and format the information on the page as well as designing the layout for the website</p>
+               <p>I designed the home page layout and information boxes as well as the menu feature. When hovered over the Fraternity and sorority boxes change image and when clicked on drop down information specifically pertaining to the corresponding organization. Beneath the title the users name will appear if they are logged in. The menu is an off canvas menu that pushes the page to the right when opened and the items in the menu change depending on whether or not a user is logged in.</p> 
+                   <p>On the Log-In page I created the drop down boxes, input boxes, buttons, and pop out modal. The website has two more pages which are the user and Admin pages. These pages correspond to the user logged in; the user page shows information pertaining to that specific user as well as a calendar that is linked to Google. I retrieved data pertaining to the specific user from the database the team created and displayed that on screen, to create a type of profile.  I created a similar layout for the Admin page while giving them the ability to modify information in the database for their specific Fraternity or Sorority users. </p>
+               <table class="w3-table-all ">
+                   <tr class="w3-red">
+                       <th>HTML &amp; CSS</th>
+                       <th>JavaScript</th>   
+                       <th>PHP</th>
+                   </tr>
+                   <tr>
+                       <td> Theme and Layout </td>
+                       <td> Information drop downs</td>
+                       <td> Current User display</td>
+                   </tr>
+                   <tr>
+                       <td> Pictures and Picture change effect</td>
+                       <td> Login and Register dropdown menu</td>
+                       <td> Menu change when logged in </td>
+                   </tr>
+                   <tr>
+                       <td> Register Modal </td>
+                       <td> Off Canvas Menu </td>
+                       <td> Member page based off of user logging in</td>
+                   </tr>
+                   
+               </table>
+                  <button type="button" onclick="document.getElementById('info').style.display='none'" class="w3-button w3-red w3-hover-pale-red">Close</button> 
+               </div>
+        </div>
+    </div>
+    
+    <div style="width:100%; overflow:hidden; display:flex; justify-content:space-between">
+        <div class="w3-card-4" style="width:475px; float:left">
+        <a href="javascript:void(0)" class="tablinks" onclick="openInfoTab(event, 'tab1')">
+            <img  style="height:300px; width:475px; float:left" src="PersonalPics/lhu_Frat&Sor.png">
+        </a> 
+            <div id="tab1" class="tabContent w3-container" style="display:none">
+                <p>Spring 2017</p>
+                <p>This is the Final Project of a six person group assignment in a class designed to introduce students to Scrum development. The greatest challenge with this project was not catching up but making sure not to go to far ahead of my group members.</p>
+                <a class=" w3-button w3-yellow w3-hover-green" style="width:49%; text-decoration:none"   href="http://penguin.lhup.edu/~lnr7605/COMP305-master/mainPageTemplate.php" target="_blank" >Visit</a>
+                <button style="width:49%" class="w3-button w3-blue w3-hover-green" onclick="document.getElementById('info').style.display='block'">
+                    contributions</button>
+                  
+            </div>
+        </div>
+    
+        <div class="w3-card-4" style="width:500px">
+            <a href="javascript:void(0)" class="tablinks " onclick="openInfoTab(event,      'tab2')">
+                <img  style="height:300px; width:500px; margin-left:15px" src="PersonalPics/HTML.png">
+            </a> 
+            <div id="tab2" class="tabContent w3-container" style="display:none;margin-left:15px">
+                <p>Fall 2015</p>
+                <p> This was a two person project which counted as the Final Examp for my Intro to Web Development Class. I like to think this was the realizing moment whith which i decided to invest my time into Web Development. </p>
+                <a class="w3-btn-block w3-aqua w3-hover-green" href="Comp205_Final/index.html" target="_blank">Visit</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div style="width:100%; overflow:hidden; display:flex; justify-content:space-between">
+        <div class="w3-card-4 " style="width:475px; float:left">
+        <a href="javascript:void(0)" class="tablinks" onclick="openInfoTab(event, 'tab3')">
+            <img  style="height:300px; width:475px; float:left" src="PersonalPics/globe.png">
+        </a> 
+            <div id="tab3" class="tabContent w3-container" style="display:none">
+                <p>Spring 2016</p>
+                <p>This was my solo Fianl project and grade for my introduction to Computer Graphics and my first introduction to THREE.js. This project sparked my interest in 3D graphics and basic animation.</p>
+                <a class="w3-btn-block w3-blue w3-hover-green" style="text-decoration:none"   href="Graphics_Final/Index.html" target="_blank">Visit</a>
+            </div>
+        </div>
+    
+        <div class="w3-card-4" style="width:500px">
+            <a href="javascript:void(0)" class="tablinks " onclick="openInfoTab(event,      'tab4')">
+                <img  style="height:300px; width:500px; margin-left:15px" src="PersonalPics/Penguin.png">
+            </a> 
+            <div id="tab4" class="tabContent w3-container" style="display:none;margin-left:15px">
+                <p>Spring 2017</p>
+                <p>Durring the final semster of my college career i did an independant study to create a website for the computer science department at Lock Haven University. This was a solo project where i treated my advisor as my customer and created a website to his specifications.</p>
+                <a class="w3-btn-block w3-red w3-hover-green" href="Penguin_Labs/Index.html" target="_blank">Visit</a>
+            </div>
+        </div>
+    </div>
+    
+    <!--
+    <a href="http://penguin.lhup.edu/~lnr7605/COMP305-master/mainPageTemplate.php"><button class="w3-btn-block w3-grey w3-hover-yellow w3-text-yellow">Comp350 Database Application Dev. </button></a>
     <p></p>
     
-    <a href="COMP205/Class_Project/index.html"><button class="w3-btn-block w3-grey w3-hover-aqua w3-text-aqua">Comp250 Web Development Final </button></a>
+    <a href="Comp205_Final/index.html"><button class="w3-btn-block w3-grey w3-hover-aqua w3-text-aqua">Comp250 Web Development Final </button></a>
     <p></p>
    
-    <a href="Graphics/Globe.html"><button class="w3-btn-block w3-grey w3-hover-blue w3-text-blue">THREE.js Graphics Final Project</button></a>
+    <a href="Graphics_Final/Index.html"><button class="w3-btn-block w3-grey w3-hover-blue w3-text-blue">THREE.js Graphics Final Project</button></a>
     <p></p>
-    <a href="Penguin_Labs/Index.php"><button class="w3-btn-block w3-grey w3-hover-red w3-text-red">Independent Study Penguin Labs </button></a>
-</div> 
+    <a href="Penguin_Labs/Index.html"><button class="w3-btn-block w3-grey w3-hover-red w3-text-red">Independent Study Penguin Labs </button></a>
+</div> -->
     
 <div class="w3-content  w3-padding-64" id="contact">
     <h2 class="w3-text-light-grey">Contact Info</h2>
     <hr style="width:200px" class="w3-opacity">
     <br>
     <ul class="w3-text-white">
-        <li class="w3-large">Email: lnr7413@gmail.com</li>
-        <li class="w3-large">School Email: lnr7605@lhup.edu</li>
-        <li>Phone: please email me...</li>
+        <li class="w3-large">Email: lucas@lucasreid.us</li>
+        <li class="w3-large"> Phone: 814-599-3236</li>
+        <br>
+        <a href="https://github.com/LucasReid" class="fa fa-github" target="_blank" style="font-size:55px; color:white; text-decoration:none"></a>
+        <a href="https://www.linkedin.com/in/lucas-reid-819286b3/" class="fa fa-linkedin-square" target="_blank" style="font-size:55px; color:white; text-decoration:none; margin-left:15px"></a>
+        <form method="get" target="_blank" action="LucasReid_Resume.pdf" style="float:left; margin-right:15px">
+        <button type="submit" style="width:75px; white-space:normal;font-size:11.5px; height:65px; border-radius: 10px 10px 10px 10px;" class="w3-button w3-center w3-gray w3-hover-green">View Resume</button>
+    </form>
     </ul>
     
 </div>   
@@ -147,5 +247,22 @@
 <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 
 </div>
+<script>
+        
+    function openInfoTab(event, tab) {
+        var i, tabContent, tablinks;
+        tabContent = document.getElementsByClassName("tabContent");
+        for (i = 0; i < tabContent.length; i++){
+            tabContent[i].style.display="none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for(i=0; i<tablinks.length;i++){ 
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tab).style.display = "block";
+        event.currentTarget.className += " active";
+    } 
+    
+    </script>   
 </body>
 </html>
